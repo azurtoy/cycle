@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*바디바디 오예*/
+
+body {
+	background-color: #ffffff;
+	margin:0;
+	padding:0;
+	font-size: 0.75em;
+	line-height: 1.2em;
+	color: #333;
+}
+
+img {
+	border:none;
+}
+
+@font-face { font-family:"seo";     
+           src:url("../images/segoeui.eot");             
+	       src:local("☺"), url("../images/segoeui.woff")  format("woff"), 
+             url("../images/segoeui.ttf") format("truetype");  
+}
+
+
+#wrap {
+	background-image: url(../images/bg6.jpg);
+	background-repeat: repeat;
+	width:1020px;
+	height: auto;
+	text-align:left;
+	margin:0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	min-height:600px;
+	
+}
+
+header {
+	height:151px;
+	margin:0;
+	padding:0;	
+}
+.clear {
+	clear:both;
+}
+
+#logo {
+	float:left;
+	width:265px;
+	margin:40px 0 0 40px;
+	/* display:inline;   ie6 bgu fix */	
+
+}
+
+/*로긴 폼 */
+#login {
+	float:right;
+	margin:20px 64px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	word-spacing: 5px;
+	/*display:inline;   ie6 bgu fix */
+}
+
+#login a {
+	text-decoration:none;
+	color: #ccc;
+}
+
+#login a:hover {
+	color: #F90;	
+}
+
+/*미친메뉴이런*/
+/*
+nav#top_menu {
+	width:700px;
+	margin:0 20px 0 0;	
+	float:right;
+	}
+	
+nav#top_menu ul, li {
+	 margin:0; 
+	 padding:0;
+ }
+nav#top_menu a {
+	text-align: center;
+	text-decoration:none;
+	display:block;
+	height:20px;
+	}
+
+nav#top_menu ul {
+	list-style:none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight:100;
+	color: #333;	
+}
+
+nav#top_menu li {
+	 position:relative; 
+	 list-style:none; 
+	 text-align:left; 
+	 width:100px;
+	 padding-bottom:5px;
+	 float:left;
+ }
+nav#top_menu .step1 a:hover{
+	background-image: url(../images/blue.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+ }
+
+nav#top_menu ul:hover {
+	color: #0eb8b8;
+	}
+
+nav#top_menu li div { 
+	display:none;
+}
+nav#top_menu:hover div {
+	display:block; 
+	position:absolute;  
+	top:20px; 
+	height:80px;
+	width:100px; 
+	border-bottom:3px solid #0eb8b8; 
+	text-align:left; 
+	padding:5px;
+	background-color: #a5e8e8 ;
+	}
+nav#top_menu .sub_menu a {
+	color: #FFFFFF;
+}
+nav#top_menu .sub_menu a:hover {
+	color:#f00;
+	background-image: none;
+ }
+ */
+ /*새로운 개간지 메뉴*/
+body{ color:#CCCCCC}
+
+ul.sdt_menu{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:14px;
+	width:1020px;
+}
+ul.sdt_menu a{
+	text-decoration:none;
+	outline:none;
+}
+ul.sdt_menu li{
+	float:left;
+	width:170px;
+	height:85px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:85px;
+	z-index:12;
+	background:transparent url(../images/overlay.png) no-repeat bottom right;
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:170px;
+	height:60px;
+	z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+	position:absolute;
+	background:#111;
+	top:85px;
+	width:170px;
+	height:0px;
+	left:0px;
+	z-index:14;
+	-moz-box-shadow:0px 0px 4px #000 inset;
+	-webkit-box-shadow:0px 0px 4px #000 inset;
+	box-shadow:0px 0px 4px #000 inset;
+}
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	color:#fff;
+	font-size:24px;
+	float:left;
+	clear:both;
+}
+ul.sdt_menu li span span.sdt_descr{
+	color:#0B75AF;
+	float:left;
+	clear:both;
+	width:155px; /*For dumbass IE7*/
+	font-size:10px;
+	letter-spacing:1px;
+}
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:170px;
+	overflow:hidden;
+	height:170px;
+	top:85px;
+	left:0px;
+	display:none;
+	background:#000;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:30px;
+	color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
+}
+
+
+
+
+/*만만한푸터*/
+
+
+footer {
+	margin:50px 0 0 0;
+	height:80px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+	background-size: 150px;
+}
+
+footer hr {
+	width:900px;
+	margin:0 0 0 15px; !important;
+	margin:0 0 0 35px; 
+}
+
+footer #copy {
+	font-family:seo;
+	width:450px;
+	margin:20px 0 0 190px;
+	float:left;	
+	
+}
+
+footer #social {
+	width:130px;
+	margin:20px 20px 0 0 ;
+	float:right;	
+}
+footer #social img {
+	margin:0 7px;
+
+}
+
+
